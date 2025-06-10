@@ -26,7 +26,7 @@ RenderSettings:
   m_AmbientIntensity: 1
   m_AmbientMode: 0
   m_SubtractiveShadowColor: {r: 0.42, g: 0.478, b: 0.627, a: 1}
-  m_SkyboxMaterial: {fileID: 10304, guid: 0000000000000000f000000000000000, type: 0}
+  m_SkyboxMaterial: {fileID: 2100000, guid: 9eb73c0f74c10f24d9e9d212b8b308eb, type: 2}
   m_HaloStrength: 0.5
   m_FlareStrength: 1
   m_FlareFadeSpeed: 3
@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.44657898, g: 0.4964133, b: 0.5748178, a: 1}
+  m_IndirectSpecularColor: {r: 0.10609361, g: 0.18746999, b: 0.23204163, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -239,7 +239,19 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a3b18c35387326a44adb50d01ecaee74, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  moveSpeed: 5
+  moveSpeed: 2
+--- !u!114 &1197326497
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1197326488}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b1f0389b2fdc3e4439050c55bd4c6c17, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1434571141
 GameObject:
   m_ObjectHideFlags: 0
@@ -346,7 +358,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   character: {fileID: 1197326491}
-  offset: {x: -0.4, y: 2.9, z: -3.8}
+  behindOffset: {x: -0.4, y: 2.9, z: -3.8}
+  frontOffset: {x: -0.4, y: 2.9, z: 3.8}
   smoothMovement: 5
 --- !u!1 &1576738412 stripped
 GameObject:
@@ -462,6 +475,10 @@ PrefabInstance:
       propertyPath: m_Controller
       value: 
       objectReference: {fileID: 9100000, guid: 94273d0591c95084bad0cbfbe6f1723c, type: 2}
+    - target: {fileID: 7155734680716283399, guid: 0735be433ce1b7046b13f69383607ced, type: 3}
+      propertyPath: m_Constraints
+      value: 80
+      objectReference: {fileID: 0}
     - target: {fileID: 8528764877279771715, guid: 0735be433ce1b7046b13f69383607ced, type: 3}
       propertyPath: m_LocalPosition.x
       value: -0
@@ -513,6 +530,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 9013834650273375993, guid: 0735be433ce1b7046b13f69383607ced, type: 3}
       insertIndex: -1
       addedObject: {fileID: 1197326493}
+    - targetCorrespondingSourceObject: {fileID: 9013834650273375993, guid: 0735be433ce1b7046b13f69383607ced, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1197326497}
   m_SourcePrefab: {fileID: 100100000, guid: 0735be433ce1b7046b13f69383607ced, type: 3}
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
