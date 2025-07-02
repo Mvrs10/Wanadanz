@@ -28,7 +28,7 @@ public class RadioController : MonoBehaviour
 
     private void Update()
     {
-        if (isInteractable && Input.GetKeyDown(KeyCode.E))
+        if (isInteractable && Input.GetKeyDown(KeyCode.F))
         {
             //Setup postion
             player.position = new Vector3(0f, 4.4f, 0f);
@@ -42,9 +42,13 @@ public class RadioController : MonoBehaviour
             Camera.main.transform.LookAt(player.position + Vector3.up * 1.5f);
 
             //Freeze my player
+            
             Rigidbody rb = player.GetComponent<Rigidbody>();
             rb.constraints = RigidbodyConstraints.FreezeAll;
-
+            CharacterMovement cm = player.GetComponent<CharacterMovement>();
+            cm.SetDance();
+            CharacterAnimation ca = player.GetComponent<CharacterAnimation>();
+            ca.SetWaiting();
             //Start the music
             SoundManager.PlaySound(SoundType.MUSIC);
         }

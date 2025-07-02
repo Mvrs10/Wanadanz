@@ -8,7 +8,7 @@ public class CameraController : MonoBehaviour
     private Vector3 currentOffset;
     public float smoothMovement = 5f;
     private bool isFollowing = true;
-
+    
     private void Start()
     {
         currentOffset = behindOffset;

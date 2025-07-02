@@ -6,6 +6,7 @@ public class CharacterMovement : MonoBehaviour
     private Rigidbody rb;
     private Vector3 movement;
     private CharacterAnimation characterAnim;
+    private bool isDancing = false;
     // Start is called before the first frame update
     void Start()
     {
@@ -21,12 +22,24 @@ public class CharacterMovement : MonoBehaviour
 
         movement = transform.right * moveX + transform.forward * moveZ;
         Vector3 inputDirection = new Vector3(moveX, 0, moveZ);
-        characterAnim.UpdateAnimation(inputDirection);
+        if (!isDancing)
+        {
+            characterAnim.UpdateAnimation(inputDirection);
+        }        
     }
 
     private void FixedUpdate()
     {
         Vector3 newPostion = rb.position + movement * moveSpeed * Time.fixedDeltaTime;
         rb.MovePosition(newPostion);
+    }
+
+    public bool GetDance()
+    {
+        return isDancing;
+    }
+    public void SetDance()
+    {
+        isDancing = true;
     }
 }
