@@ -37,10 +37,4 @@ public class CharacterAnimation : MonoBehaviour
     {
         anim.SetTrigger(waitingState);
     }
-
-    public void SetDance(int index)
-    {
-        danceIndex = index;
-        anim.SetInteger("danceIndex", danceIndex);
-    }
 }
